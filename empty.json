@@ -1,0 +1,47 @@
+{
+    "accountId": "NeoniteUser",
+    "created": "2021-09-18T18:38:03.948Z",
+    "id": "NeoniteUser",
+    "items": {
+        "": ""
+    },
+    "profileId": "athena",
+    "rvn": 1,
+    "stats": {
+        "attributes": {
+            "accountLevel": 10000,
+            "active_loadout_index": 0,
+            "book_level": 1000,
+            "book_purchased": true,
+            "book_xp": 0,
+            "competitive_identity": {},
+            "daily_rewards": {},
+            "inventory_limit_bonus": 0,
+            "last_applied_loadout": "loadout_1",
+            "level": 1000,
+            "lifetime_wins": 999,
+            "loadouts": [
+                "sandbox_loadout",
+                "loadout_1"
+            ],
+            "mfa_reward_claimed": true,
+            "party_assist_quest": "",
+            "permissions": [],
+            "purchased_battle_pass_tier_offers": [],
+            "quest_manager": {},
+            "rested_xp": 204000,
+            "rested_xp_exchange": 0.333,
+            "rested_xp_mult": 12.75,
+            "rested_xp_overflow": 0,
+            "season_friend_match_boost": 0,
+            "season_match_boost": 999,
+            "season_num": 14,
+            "season_update": 0,
+            "xp": 50000,
+            "xp_overflow": 0
+        }
+    },
+    "updated": "2021-09-18T18:38:03.948Z",
+    "version": "18.10",
+    "wipeNumber": 1
+}
