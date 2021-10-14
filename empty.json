@@ -1,47 +1,247 @@
 {
-    "accountId": "NeoniteUser",
-    "created": "2021-09-18T18:38:03.948Z",
-    "id": "NeoniteUser",
-    "items": {
-        "": ""
-    },
+    "_id": "RANDOM",
+    "updated": "2021-10-14T00:19:04.062Z",
+    "created": "2021-09-18T16:37:53.661Z",
+    "rvn": 9,
+    "wipeNumber": 1,
+    "accountId": "RANDOM",
     "profileId": "athena",
-    "rvn": 1,
-    "stats": {
+    "version": "neonite_2",
+    "items": {
+      "sandbox_loadout": {
+        "templateId": "CosmeticLocker:cosmeticlocker_athena",
         "attributes": {
-            "accountLevel": 10000,
-            "active_loadout_index": 0,
-            "book_level": 1000,
-            "book_purchased": true,
-            "book_xp": 0,
-            "competitive_identity": {},
-            "daily_rewards": {},
-            "inventory_limit_bonus": 0,
-            "last_applied_loadout": "loadout_1",
-            "level": 1000,
-            "lifetime_wins": 999,
-            "loadouts": [
-                "sandbox_loadout",
-                "loadout_1"
-            ],
-            "mfa_reward_claimed": true,
-            "party_assist_quest": "",
-            "permissions": [],
-            "purchased_battle_pass_tier_offers": [],
-            "quest_manager": {},
-            "rested_xp": 204000,
-            "rested_xp_exchange": 0.333,
-            "rested_xp_mult": 12.75,
-            "rested_xp_overflow": 0,
-            "season_friend_match_boost": 0,
-            "season_match_boost": 999,
-            "season_num": 14,
-            "season_update": 0,
-            "xp": 50000,
-            "xp_overflow": 0
-        }
+          "locker_slots_data": {
+            "slots": {
+              "Pickaxe": {
+                "items": [
+                  null
+                ]
+              },
+              "Dance": {
+                "items": [
+                  "AthenaDance:EID_TakeTheW",
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "Glider": {
+                "items": [
+                  null
+                ]
+              },
+              "Character": {
+                "items": [
+                  "AthenaCharacter:CID_030_Athena_Commando_M_Halloween"
+                ],
+                "activeVariants": [
+                  {
+                    "variants": [
+                      {
+                        "channel": "ClothingColor",
+                        "active": "STYLE",
+                        "owned": [
+                          "Mat0",
+                          "Mat1",
+                          "Mat2",
+                          "Mat3"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "Backpack": {
+                "items": [
+                  null
+                ],
+                "activeVariants": []
+              },
+              "ItemWrap": {
+                "items": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "activeVariants": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "LoadingScreen": {
+                "items": [
+                  null
+                ],
+                "activeVariants": [
+                  null
+                ]
+              },
+              "MusicPack": {
+                "items": [
+                  null
+                ],
+                "activeVariants": [
+                  null
+                ]
+              },
+              "SkyDiveContrail": {
+                "items": [
+                  null
+                ],
+                "activeVariants": [
+                  null
+                ]
+              }
+            }
+          },
+          "use_count": 0,
+          "banner_icon_template": "",
+          "locker_name": "",
+          "banner_color_template": "",
+          "item_seen": false,
+          "favorite": false
+        },
+        "quantity": 1
+      },
+      "loadout_1": {
+        "templateId": "CosmeticLocker:cosmeticlocker_athena",
+        "attributes": {
+          "locker_slots_data": {
+            "slots": {
+              "Pickaxe": {
+                "items": [
+                  null
+                ],
+                "activeVariants": []
+              },
+              "Dance": {
+                "items": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "Glider": {
+                "items": [
+                  null
+                ]
+              },
+              "Character": {
+                "items": [
+                  "AthenaCharacter:cid_028_athena_commando_f"
+                ],
+                "activeVariants": []
+              },
+              "Backpack": {
+                "items": [
+                  null
+                ],
+                "activeVariants": []
+              },
+              "ItemWrap": {
+                "items": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "activeVariants": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ]
+              },
+              "LoadingScreen": {
+                "items": [
+                  null
+                ],
+                "activeVariants": [
+                  null
+                ]
+              },
+              "MusicPack": {
+                "items": [
+                  null
+                ],
+                "activeVariants": [
+                  null
+                ]
+              },
+              "SkyDiveContrail": {
+                "items": [
+                  null
+                ],
+                "activeVariants": [
+                  null
+                ]
+              }
+            }
+          },
+          "use_count": 0,
+          "banner_icon_template": "",
+          "locker_name": "",
+          "banner_color_template": "",
+          "item_seen": false,
+          "favorite": false
+        },
+        "quantity": 1
+      }
     },
-    "updated": "2021-09-18T18:38:03.948Z",
-    "version": "18.10",
-    "wipeNumber": 1
-}
+    "stats": {
+      "attributes": {
+        "season_match_boost": 999,
+        "loadouts": [
+          "sandbox_loadout",
+          "loadout_1"
+        ],
+        "rested_xp_overflow": 0,
+        "mfa_reward_claimed": true,
+        "quest_manager": {},
+        "book_level": 1000,
+        "season_num": 14,
+        "season_update": 0,
+        "book_xp": 0,
+        "permissions": [],
+        "book_purchased": true,
+        "lifetime_wins": 999,
+        "party_assist_quest": "",
+        "purchased_battle_pass_tier_offers": [],
+        "rested_xp_exchange": 0.333,
+        "level": 1000,
+        "xp_overflow": 0,
+        "rested_xp": 204000,
+        "rested_xp_mult": 12.75,
+        "accountLevel": 10000,
+        "competitive_identity": {},
+        "inventory_limit_bonus": 0,
+        "last_applied_loadout": "loadout_1",
+        "daily_rewards": {},
+        "xp": 50000,
+        "season_friend_match_boost": 0,
+        "active_loadout_index": 0
+      }
+    },
+    "commandRevision": 7
+  }

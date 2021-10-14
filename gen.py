@@ -15,12 +15,12 @@ if ioption == '2':
     print('\nUser selected Generate New Cosmetics. Generating Profile_Athena now.')
 
 
-with open(f'profile_athena_GENERATED.json', 'w') as x:
+with open(f'profile_athena.json', 'w') as x:
         with open('empty.json') as f:
             ting = json.load(f)
         json.dump(ting, x, indent = 4)
 
-a_file = open(f"profile_athena_GENERATED.json", "r")
+a_file = open(f"profile_athena.json", "r")
 json_object = json.load(a_file)
 a_file.close()
 
@@ -47,6 +47,30 @@ if ioption == '1': # All items
             },
             'templateId': f'{id}'
         }
+        try:
+            variants = True
+            channel = i['variants'][0]['channel']
+            active = i['variants'][0]['options'][0]['tag']
+        except:
+            variants = None
+
+        if variants == True:
+            print(i['id'])
+            channel = i['variants'][0]['channel']
+            active = i['variants'][0]['options'][0]['tag']
+
+            json_object['items'][id]['attributes']['variants'] = [{
+               "active": f"{active}",
+               "channel": f"{channel}",
+               "owned": []
+            }]
+            for i in i['variants'][0]['options']:
+                tag = i['tag']
+                json_object['items'][id]['attributes']['variants'][0]['owned'] = [
+                    f"{tag}"
+                ]
+            
+
 else: # New items
     for i in response.json()['items']:
         id = i['id']
@@ -66,7 +90,7 @@ else: # New items
             'templateId': f'{id}'
         }
 
-a_file = open(f"profile_athena_GENERATED.json", "w")
+a_file = open(f"profile_athena.json", "w")
 json.dump(json_object, a_file, indent = 4)
 
 print('\nGenerated!')
