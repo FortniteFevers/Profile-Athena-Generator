@@ -89,6 +89,28 @@ else: # New items
             },
             'templateId': f'{id}'
         }
+        try:
+            variants = True
+            channel = i['variants'][0]['channel']
+            active = i['variants'][0]['options'][0]['tag']
+        except:
+            variants = None
+
+        if variants == True:
+            print(i['id'])
+            channel = i['variants'][0]['channel']
+            active = i['variants'][0]['options'][0]['tag']
+
+            json_object['items'][id]['attributes']['variants'] = [{
+               "active": f"{active}",
+               "channel": f"{channel}",
+               "owned": []
+            }]
+            for i in i['variants'][0]['options']:
+                tag = i['tag']
+                json_object['items'][id]['attributes']['variants'][0]['owned'] = [
+                    f"{tag}"
+                ]
 
 a_file = open(f"profile_athena.json", "w")
 json.dump(json_object, a_file, indent = 4)
