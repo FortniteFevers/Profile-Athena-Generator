@@ -6,7 +6,7 @@
     "wipeNumber": 1,
     "accountId": "RANDOM",
     "profileId": "athena",
-    "version": "neonite_2",
+    "version": "fortnite epic games",
     "items": {
       "sandbox_loadout": {
         "templateId": "CosmeticLocker:cosmeticlocker_athena",
@@ -204,7 +204,8 @@
           "locker_name": "",
           "banner_color_template": "",
           "item_seen": false,
-          "favorite": false
+          "favorite": false,
+          "locker_name": "fevers",
         },
         "quantity": 1
       }
