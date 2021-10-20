@@ -201,11 +201,10 @@
           },
           "use_count": 0,
           "banner_icon_template": "",
-          "locker_name": "",
+          "locker_name": "fevers",
           "banner_color_template": "",
           "item_seen": false,
-          "favorite": false,
-          "locker_name": "fevers",
+          "favorite": false
         },
         "quantity": 1
       }
