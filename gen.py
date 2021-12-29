@@ -39,6 +39,8 @@ if ioption == '1': # All items
     for i in response.json():
         id = i['id']
         backendtype = i['backendType']
+        if backendtype in ("AthenaEmoji", "AthenaSpray", "AthenaToy"): backendtype = "AthenaDance"
+        elif backendtype in ("AthenaPetCarrier"): backendtype = "AthenaBackpack"
         id = f'{backendtype}:{id}'
 
         json_object['items'][id] = {
@@ -84,6 +86,8 @@ elif ioption == '2': # New items
     for i in response.json()['items']:
         id = i['id']
         backendtype = i['backendType']
+        if backendtype in ("AthenaEmoji", "AthenaSpray", "AthenaToy"): backendtype = "AthenaDance"
+        elif backendtype in ("AthenaPetCarrier"): backendtype = "AthenaBackpack"
         id = f'{backendtype}:{id}'
 
         json_object['items'][id] = {
@@ -126,6 +130,8 @@ elif ioption == '3': # Set items
     for i in response.json()['data']:
         id = i['id']
         backendtype = i['type']['backendValue']
+        if backendtype in ("AthenaEmoji", "AthenaSpray", "AthenaToy"): backendtype = "AthenaDance"
+        elif backendtype in ("AthenaPetCarrier"): backendtype = "AthenaBackpack"
         id = f'{backendtype}:{id}'
 
         json_object['items'][id] = {
