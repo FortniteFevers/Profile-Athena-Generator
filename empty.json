@@ -211,37 +211,98 @@
     },
     "stats": {
       "attributes": {
-        "season_match_boost": 999,
-        "loadouts": [
-          "sandbox_loadout",
-          "loadout_1"
-        ],
-        "rested_xp_overflow": 0,
-        "mfa_reward_claimed": true,
-        "quest_manager": {},
-        "book_level": 1000,
-        "season_num": 14,
-        "season_update": 0,
-        "book_xp": 0,
-        "permissions": [],
-        "book_purchased": true,
-        "lifetime_wins": 999,
-        "party_assist_quest": "",
-        "purchased_battle_pass_tier_offers": [],
-        "rested_xp_exchange": 0.333,
-        "level": 1000,
-        "xp_overflow": 0,
-        "rested_xp": 204000,
-        "rested_xp_mult": 12.75,
-        "accountLevel": 10000,
-        "competitive_identity": {},
-        "inventory_limit_bonus": 0,
-        "last_applied_loadout": "loadout_1",
-        "daily_rewards": {},
-        "xp": 50000,
-        "season_friend_match_boost": 0,
-        "active_loadout_index": 0
+          "season_match_boost": 999,
+          "loadouts": [
+              "sandbox_loadout",
+              "loadout_1"
+          ],
+          "rested_xp_overflow": 0,
+          "mfa_reward_claimed": true,
+          "quest_manager": {},
+          "book_level": 1000,
+          "season_num": 19,
+          "season_update": 19,
+          "book_xp": 0,
+          "permissions": [],
+          "book_purchased": true,
+          "lifetime_wins": 999,
+          "party_assist_quest": "",
+          "purchased_battle_pass_tier_offers": [],
+          "rested_xp_exchange": 0.333,
+          "level": 999,
+          "xp_overflow": 0,
+          "rested_xp": 204000,
+          "rested_xp_mult": 12.75,
+          "accountLevel": 10000,
+          "competitive_identity": {},
+          "inventory_limit_bonus": 0,
+          "last_applied_loadout": "loadout_1",
+          "daily_rewards": {},
+          "xp": 1,
+          "season_friend_match_boost": 0,
+          "active_loadout_index": 0,
+          "battlestars": 999999
       }
     },
+    "GIFTS": {
+      "templateId": "AthenaRewardGraph:s19_winterfest",
+      "attributes": {
+        "reward_nodes_claimed": [
+          "ERG.Node.A.9",
+          "ERG.Node.A.12",
+          "ERG.Node.C.1",
+          "ERG.Node.A.6",
+          "ERG.Node.A.2",
+          "ERG.Node.A.7",
+          "ERG.Node.A.4",
+          "ERG.Node.A.5",
+          "ERG.Node.A.3",
+          "ERG.Node.B.1",
+          "ERG.Node.A.10",
+          "ERG.Node.A.11",
+          "ERG.Node.A.8"
+        ],
+        "unlock_epoch": "2021-12-16T13:52:10.000Z",
+        "unlock_keys_used": 0,
+        "player_random_seed": -2143043306,
+        "item_seen": false,
+        "player_state": [],
+        "reward_graph_purchased_timestamp": 1639693875638,
+        "reward_graph_purchased": true,
+        "reward_keys": [
+          {
+            "static_key_template_id": "Token:athena_s19_winterfest_key",
+            "static_key_max_count": 14,
+            "static_key_initial_count": 1,
+            "unlock_keys_used": 13
+          }
+        ]
+      },
+      "quantity": 1
+    },
+    "GIFT_KEY": {
+      "templateId": "Token:athena_s19_winterfest_key",
+      "attributes": {
+        "max_level_bonus": 0,
+        "level": 1,
+        "item_seen": false,
+        "xp": 0,
+        "favorite": false
+      },
+      "quantity": 14
+    },
+    "AthenaDance:EID_Davinci": {
+      "attributes": {
+        "favorite": false,
+        "item_seen": true,
+        "level": 0,
+        "max_level_bonus": 0,
+        "rnd_sel_cnt": 0,
+        "variants": [],
+        "xp": 0
+      },
+      "templateId": "AthenaDance:EID_Davinci"
+    },
+
     "commandRevision": 7
   }
