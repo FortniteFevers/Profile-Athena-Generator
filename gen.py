@@ -2,43 +2,34 @@ import json
 import requests
 import time
 
-print('Profile Athena Generator - by fevers')
-
-print('\nWhats your config name?')
-iname = input('>> ')
-
-print('\nDo you want to load either all or new cosmetics?\n(1): All\n(2): New')
-ioption = input('>> ')
-
-if ioption == '1':
-    print('\nUser selected Generate All Cosmetics. Generating Profile_Athena now.')
-if ioption == '2':
-    print('\nUser selected Generate New Cosmetics. Generating Profile_Athena now.')
-
+#print('Profile Athena Generator - by fevers')
 
 with open(f'profile_athena.json', 'w') as x:
-        with open('empty.json') as f:
-            ting = json.load(f)
-        json.dump(ting, x, indent = 4)
+    with open('empty.json') as f:
+        ting = json.load(f)
+    json.dump(ting, x, indent = 4)
 
 a_file = open(f"profile_athena.json", "r")
 json_object = json.load(a_file)
 a_file.close()
 
+print("1: Load All cosmetics\n2: Load new cosmetics\n3: Load Pak Cosmetics")
+ioption = input('>> ')
+
 if ioption == '1':
-    response = requests.get('https://benbot.app/api/v1/cosmetics/br?lang=en')
+    response = requests.get('https://fortnite-api.com/v2/cosmetics/br')
 elif ioption == '2':
-    response = requests.get('https://benbot.app/api/v1/newCosmetics?lang=en')
+    response = requests.get('https://fortnite-api.com/v2/cosmetics/br/new')
 elif ioption == '3':
-    print('What set do u wanna grab?')
+    print('What pak do u wanna grab?')
     ask = input('>> ')
-    response = requests.get(f'https://fortnite-api.com/v2/cosmetics/br/search/all?set={ask}')
+    response = requests.get(f'https://fortnite-api.com/v2/cosmetics/br/search/all?dynamicPakId={ask}')
 
 if ioption == '1': # All items
     start = time.time()
-    for i in response.json():
+    for i in response.json()['data']:
         id = i['id']
-        backendtype = i['backendType']
+        backendtype = i['type']['backendValue']
         id = f'{backendtype}:{id}'
 
         json_object['items'][id] = {
@@ -61,7 +52,7 @@ if ioption == '1': # All items
             variants = None
 
         if variants == True:
-            print(i['id'])
+            #print(i['id'])
             channel = i['variants'][0]['channel']
             active = i['variants'][0]['options'][0]['tag']
 
@@ -77,13 +68,13 @@ if ioption == '1': # All items
                 )
 
     end = time.time()
-    print(f'Generated in {round(end - start, 2)} seconds')
+    #print(f'Generated in {round(end - start, 2)} seconds')
             
 
 elif ioption == '2': # New items
-    for i in response.json()['items']:
+    for i in response.json()['data']['items']:
         id = i['id']
-        backendtype = i['backendType']
+        backendtype = i['type']['backendValue']
         id = f'{backendtype}:{id}'
 
         json_object['items'][id] = {
@@ -106,7 +97,7 @@ elif ioption == '2': # New items
             variants = None
 
         if variants == True:
-            print(i['id'])
+            #print(i['id'])
             channel = i['variants'][0]['channel']
             active = i['variants'][0]['options'][0]['tag']
 
@@ -166,5 +157,5 @@ elif ioption == '3': # Set items
 a_file = open(f"profile_athena.json", "w")
 json.dump(json_object, a_file, indent = 4)
 
-print('\nGenerated!')
-time.sleep(5)
+#print('\nGenerated!')
+#time.sleep(5)
