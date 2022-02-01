@@ -11,4 +11,4 @@ A simple profile athena generator for Fortnite Private Servers.
 ### Please read:
 - Must have Python installed and the requests module installed
 
-*This program is powered by [BenBot](https://benbot.stoplight.io/docs/benbot-docs).*
+*This program is powered by [Fortnite-API](https://fortnite-api.com/).*
