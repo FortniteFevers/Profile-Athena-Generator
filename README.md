@@ -3,8 +3,8 @@ A simple profile athena generator for Fortnite Private Servers.
 
 
 ### This profile athena generrator features:
-- Item variants
-- Get all cosmetics
+- Get every single cosmetic (with variants) in a profile_athena file
+- Get all cosmetics (with new variants)
 - Get cosmetics from specific update
 - Get cosmetics from specific dynamic pak
 
