@@ -27,14 +27,27 @@ elif ioption == '3':
 
 if ioption == '1': # All items
     start = time.time()
+
+    newids = []
+    
+    newresponse = requests.get('https://fortnite-api.com/v2/cosmetics/br/new')
+    for i in newresponse.json()['data']['items']:
+        id = i['id']
+        newids.append(id)
+
     for i in response.json()['data']:
         id = i['id']
         backendtype = i['type']['backendValue']
         id = f'{backendtype}:{id}'
 
+        if i['id'] in newids:
+            fav = True
+        else:
+            fav = False
+
         json_object['items'][id] = {
             'attributes': {
-                "favorite": False,
+                "favorite": fav,
                 "item_seen": True,
                 "level": 1,
                 "max_level_bonus": 0,
