@@ -25,8 +25,9 @@ elif ioption == '3':
     ask = input('>> ')
     response = requests.get(f'https://fortnite-api.com/v2/cosmetics/br/search/all?dynamicPakId={ask}')
 
-if ioption == '1': # All items
-    start = time.time()
+start = time.time()
+
+if ioption == '1': # All item
 
     newids = []
     
@@ -61,8 +62,9 @@ if ioption == '1': # All items
             variants = True
             channel = i['variants'][0]['channel']
             active = i['variants'][0]['options'][0]['tag']
-        except:
+        except Exception as e:
             variants = None
+            print('ERROR:', e)
 
         if variants == True:
             #print(i['id'])
@@ -80,9 +82,7 @@ if ioption == '1': # All items
                     f'{tag}'
                 )
 
-    end = time.time()
-    #print(f'Generated in {round(end - start, 2)} seconds')
-            
+
 
 elif ioption == '2': # New items
     for i in response.json()['data']['items']:
@@ -194,8 +194,10 @@ elif ioption == '3': # Set items
                     f"{tag}"
                 ]
 
+end = time.time()
 a_file = open(f"profile_athena.json", "w")
 json.dump(json_object, a_file, indent = 4)
 
+print(f'Generated in {round(end - start, 2)} seconds')
 #print('\nGenerated!')
 #time.sleep(5)
