@@ -5,7 +5,7 @@ import time
 #print('Profile Athena Generator - by fevers')
 
 with open(f'profile_athena.json', 'w') as x:
-    with open('empty.json') as f:
+    with open('template.json') as f:
         ting = json.load(f)
     json.dump(ting, x, indent = 4)
 
@@ -64,7 +64,7 @@ if ioption == '1': # All item
             active = i['variants'][0]['options'][0]['tag']
         except Exception as e:
             variants = None
-            print('ERROR:', e)
+            #print('ERROR:', e)
 
         if variants == True:
             #print(i['id'])
@@ -124,32 +124,6 @@ elif ioption == '2': # New items
                 json_object['items'][id]['attributes']['variants'][0]['owned'].append(
                     f'{tag}'
                 )
-                
-
-    print('\nDo you want to generate new cosmetic variants as well?\n(1) Yes\n(2) No\n')
-    variantask = input('>> ')
-    if variantask == '1':
-        response = requests.get('https://benbot.app/api/v1/files/added')
-        for i in response.json():
-            if i.startswith('FortniteGame/Content/Athena/Items/CosmeticVariantTokens/'):
-                response = requests.get(f'https://benbot.app/api/v1/assetProperties?path={i}')
-                data = response.json()['export_properties'][0]
-                id = data['cosmetic_item']
-                response = requests.get(f'https://fortnite-api.com/v2/cosmetics/br/search?id={id}')
-                backendType = response.json()['data']['type']['backendValue']
-                json_object['items'][id] = {
-                    'attributes': {
-                        "favorite": False,
-                        "item_seen": True,
-                        "level": 1,
-                        "max_level_bonus": 0,
-                        "rnd_sel_cnt": 0,
-                        "variants": [],
-                        "xp": 0
-                    },
-                    'templateId': f'{backendType}:{id}'
-                }
-        print('Added variants!')
 
 
 
@@ -179,7 +153,7 @@ elif ioption == '3': # Set items
             variants = None
 
         if variants == True:
-            print(i['id'])
+            print("Variants added for:", i['id'])
             channel = i['variants'][0]['channel']
             active = i['variants'][0]['options'][0]['tag']
 
